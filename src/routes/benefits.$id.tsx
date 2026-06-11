@@ -1,4 +1,4 @@
-import { createFileRoute, Link, useNavigate, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { loadProfile, isProfileComplete } from "@/lib/profile";
@@ -35,6 +35,7 @@ function BenefitDetail() {
   const navigate = useNavigate();
   const [profile, setProfile] = useState<Profile | null>(null);
   const [benefit, setBenefit] = useState<Benefit | null>(null);
+  const [missing, setMissing] = useState(false);
   const [steps, setSteps] = useState<string[] | null>(null);
   const [checked, setChecked] = useState<Record<string, boolean>>({});
 
@@ -45,7 +46,7 @@ function BenefitDetail() {
 
     const data = getStateData(p.state);
     const b = data?.benefits.find((x) => x.id === id);
-    if (!b) { throw notFound(); }
+    if (!b) { setMissing(true); return; }
     setBenefit(b);
 
     try {
@@ -69,6 +70,14 @@ function BenefitDetail() {
     try { localStorage.setItem("haqdaar:docs:" + benefit.id, JSON.stringify(checked)); } catch {}
   }, [checked, benefit]);
 
+  if (missing) {
+    return (
+      <div className="brutal-card p-6 text-center">
+        <h2 className="font-display text-xl font-extrabold">Benefit not found</h2>
+        <Link to="/benefits" className="mt-3 inline-block underline">← back to your benefits</Link>
+      </div>
+    );
+  }
   if (!benefit || !profile) return null;
 
   const result = matchBenefits(profile);
