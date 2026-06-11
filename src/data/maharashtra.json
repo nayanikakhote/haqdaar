@@ -1,0 +1,312 @@
+{
+  "state": "maharashtra",
+  "boardName": {
+    "en": "Maharashtra Building & Other Construction Workers Welfare Board (MahaBOCW)",
+    "hi": "महाराष्ट्र इमारत व इतर बांधकाम कामगार कल्याणकारी मंडळ (MahaBOCW)",
+    "mr": "महाराष्ट्र इमारत व इतर बांधकाम कामगार कल्याणकारी मंडळ (MahaBOCW)"
+  },
+  "portal": "https://mahabocw.in",
+  "sourceNote": "Amounts taken from the official MahaBOCW welfare schemes page (mahabocw.in/en/welfare-schemes). Verify before any official/legal use as boards revise amounts periodically.",
+  "registration": {
+    "minAge": 18,
+    "maxAge": 60,
+    "minDaysWorked": 90,
+    "feeNote": {
+      "en": "Registration is effectively free / a nominal fee. Renewal applies yearly.",
+      "hi": "नोंदणी मोफत / नाममात्र शुल्क. दरवर्षी नूतनीकरण.",
+      "mr": "नोंदणी मोफत / नाममात्र शुल्क. दरवर्षी नूतनीकरण."
+    }
+  },
+  "benefits": [
+    {
+      "id": "mh_registration",
+      "category": "registration",
+      "isRegistrationStep": true,
+      "name": {
+        "en": "Register with the Board (Bandhkam Kamgar Nondani)",
+        "hi": "मंडळात नोंदणी करा (बांधकाम कामगार नोंदणी)",
+        "mr": "मंडळात नोंदणी करा (बांधकाम कामगार नोंदणी)"
+      },
+      "description": {
+        "en": "Your gateway to every other benefit. Free / nominal fee, valid 1 year, renewable. Needed before you can claim anything else.",
+        "hi": "इतर सर्व लाभांचे प्रवेशद्वार. मोफत / नाममात्र शुल्क, 1 वर्ष वैध, नूतनीकरण करता येते.",
+        "mr": "इतर सर्व लाभांचे प्रवेशद्वार. मोफत / नाममात्र शुल्क, 1 वर्ष वैध, नूतनीकरण करता येते."
+      },
+      "amount": { "value": 1, "display": { "en": "Free / nominal", "hi": "मोफत / नाममात्र", "mr": "मोफत / नाममात्र" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "minDaysWorked": 90, "requiresRegistration": false },
+      "documents": [
+        "Aadhaar card",
+        "90-day work certificate (signed by contractor/employer)",
+        "Age proof",
+        "Residence proof (Maharashtra)",
+        "Bank passbook",
+        "Passport-size photos"
+      ],
+      "howToClaim": [
+        "Go to mahabocw.in and open Worker Registration",
+        "Check eligibility, then fill the form with Aadhaar + mobile number",
+        "Upload documents and your 90-day work certificate",
+        "Book the verification appointment (free — beware of agents charging money)",
+        "Collect your registration card once verified"
+      ],
+      "officeLink": "https://mahabocw.in/en/worker-registration/"
+    },
+    {
+      "id": "mh_education_scholarship",
+      "category": "education",
+      "name": {
+        "en": "Children's Education Scholarship",
+        "hi": "बच्चों के लिए शैक्षणिक शिष्यवृत्ती",
+        "mr": "मुलांसाठी शैक्षणिक शिष्यवृत्ती"
+      },
+      "description": {
+        "en": "Annual scholarship for your children's schooling and higher education. ₹2,500/yr (class 1-7), ₹5,000/yr (class 8-10, needs 75% attendance), up to ₹1,00,000 for graduation/professional courses. Max 2 children.",
+        "hi": "आपके बच्चों की पढ़ाई के लिए सालाना शिष्यवृत्ती. कक्षा 1-7: ₹2,500, कक्षा 8-10: ₹5,000, उच्च शिक्षा के लिए ₹1,00,000 तक. अधिकतम 2 बच्चे.",
+        "mr": "तुमच्या मुलांच्या शिक्षणासाठी वार्षिक शिष्यवृत्ती. इयत्ता 1-7: ₹2,500, इयत्ता 8-10: ₹5,000, उच्च शिक्षणासाठी ₹1,00,000 पर्यंत. जास्तीत जास्त 2 मुले."
+      },
+      "amount": { "value": 100000, "display": { "en": "₹2,500 – ₹1,00,000 / yr", "hi": "₹2,500 – ₹1,00,000 / वर्ष", "mr": "₹2,500 – ₹1,00,000 / वर्ष" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true, "requiresKids": true },
+      "documents": [
+        "Registration card (board ID)",
+        "Child's school/college bonafide certificate",
+        "Previous year mark sheet",
+        "Attendance proof (75%+ for class 8-10)",
+        "2026-format Educational Self-Declaration form (mandatory since Jan 2026)",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Log in at mahabocw.in and open Schemes → Education Scholarship",
+        "Download the 2026 Self-Declaration form (old format is auto-rejected)",
+        "Fill the form per child (max 2) and attach school documents",
+        "Submit online or at the Board office and track status"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_maternity",
+      "category": "maternity",
+      "name": {
+        "en": "Maternity Benefit",
+        "hi": "प्रसूति लाभ",
+        "mr": "प्रसूती लाभ"
+      },
+      "description": {
+        "en": "Cash support during pregnancy and childbirth for registered women workers and wives of registered male workers (up to 2 children).",
+        "hi": "गर्भावस्था और प्रसव के दौरान नकद सहायता — पंजीकृत महिला कामगार और पंजीकृत पुरुष कामगार की पत्नी के लिए (2 बच्चों तक).",
+        "mr": "गर्भधारणा व प्रसूतीदरम्यान रोख मदत — नोंदणीकृत महिला कामगार व नोंदणीकृत पुरुष कामगाराच्या पत्नीसाठी (2 मुलांपर्यंत)."
+      },
+      "amount": { "value": 20000, "display": { "en": "₹15,000 – ₹20,000", "hi": "₹15,000 – ₹20,000", "mr": "₹15,000 – ₹20,000" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true, "custom": "maternity" },
+      "documents": [
+        "Registration card",
+        "Medical certificate / hospital bills",
+        "Birth certificate of child",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Schemes → Maternity Benefit on mahabocw.in",
+        "Attach the medical certificate and birth certificate",
+        "Submit within the allowed window after childbirth"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_marriage",
+      "category": "marriage",
+      "name": {
+        "en": "Marriage Assistance",
+        "hi": "विवाह सहायता",
+        "mr": "विवाह सहाय्य"
+      },
+      "description": {
+        "en": "₹51,000 towards the marriage of a registered worker's daughter.",
+        "hi": "पंजीकृत कामगार की बेटी के विवाह के लिए ₹51,000.",
+        "mr": "नोंदणीकृत कामगाराच्या मुलीच्या विवाहासाठी ₹51,000."
+      },
+      "amount": { "value": 51000, "display": { "en": "₹51,000", "hi": "₹51,000", "mr": "₹51,000" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Marriage certificate",
+        "Wedding invitation card",
+        "Photographs of the ceremony",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Schemes → Marriage Assistance on mahabocw.in",
+        "Attach marriage certificate, invitation and photos",
+        "Submit within the allowed window after the marriage"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_disability",
+      "category": "accident",
+      "name": {
+        "en": "Permanent Disability Assistance",
+        "hi": "स्थायी विकलांगता सहायता",
+        "mr": "कायमस्वरूपी अपंगत्व सहाय्य"
+      },
+      "description": {
+        "en": "Up to ₹2,00,000 for permanent disability (75%+), certified by a competent medical board.",
+        "hi": "स्थायी विकलांगता (75%+) के लिए ₹2,00,000 तक.",
+        "mr": "कायमस्वरूपी अपंगत्वासाठी (75%+) ₹2,00,000 पर्यंत."
+      },
+      "amount": { "value": 200000, "display": { "en": "Up to ₹2,00,000", "hi": "₹2,00,000 तक", "mr": "₹2,00,000 पर्यंत" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "75% disability certificate from competent medical board",
+        "Medical treatment records and bills",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Schemes → Disability Assistance on mahabocw.in",
+        "Attach the disability certificate and medical records",
+        "Submit online or at the Board office"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_medical",
+      "category": "medical",
+      "name": {
+        "en": "Critical Illness / Medical Assistance",
+        "hi": "गंभीर बीमारी / चिकित्सा सहायता",
+        "mr": "गंभीर आजार / वैद्यकीय सहाय्य"
+      },
+      "description": {
+        "en": "Up to ₹1,00,000 for treatment of critical illness for the worker or family, plus free cashless treatment under Mahatma Jyotiba Phule Jan Arogya Yojana.",
+        "hi": "कामगार या परिवार के गंभीर इलाज के लिए ₹1,00,000 तक, साथ ही MJPJAY के तहत मुफ्त इलाज.",
+        "mr": "कामगार किंवा कुटुंबाच्या गंभीर आजाराच्या उपचारासाठी ₹1,00,000 पर्यंत, तसेच MJPJAY अंतर्गत मोफत उपचार."
+      },
+      "amount": { "value": 100000, "display": { "en": "Up to ₹1,00,000 + free treatment", "hi": "₹1,00,000 तक + मुफ्त इलाज", "mr": "₹1,00,000 पर्यंत + मोफत उपचार" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Medical reports and doctor's prescription",
+        "Hospital bills and treatment details",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Schemes → Medical Assistance on mahabocw.in",
+        "Attach reports, prescription and hospital bills",
+        "Submit online or at the Board office"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_accidental_death",
+      "category": "accident",
+      "name": {
+        "en": "Accidental Death Benefit (for family)",
+        "hi": "दुर्घटना मृत्यु लाभ (परिवार के लिए)",
+        "mr": "अपघाती मृत्यू लाभ (कुटुंबासाठी)"
+      },
+      "description": {
+        "en": "₹5,00,000 to the family/nominee in case of accidental death (₹2,00,000 for natural death; ₹10,000 funeral assistance).",
+        "hi": "दुर्घटना में मृत्यु पर परिवार को ₹5,00,000 (प्राकृतिक मृत्यु पर ₹2,00,000; अंत्यसंस्कार ₹10,000).",
+        "mr": "अपघाती मृत्यूवर कुटुंबाला ₹5,00,000 (नैसर्गिक मृत्यूवर ₹2,00,000; अंत्यसंस्कार ₹10,000)."
+      },
+      "amount": { "value": 500000, "display": { "en": "₹5,00,000", "hi": "₹5,00,000", "mr": "₹5,00,000" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Death certificate",
+        "FIR copy and post-mortem report (accidental)",
+        "Legal heir / nominee certificate",
+        "Bank passbook of nominee"
+      ],
+      "howToClaim": [
+        "Nominee opens Schemes → Death Benefit on mahabocw.in",
+        "Attach death certificate, FIR/post-mortem and heir certificate",
+        "Submit at the Board office"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_housing",
+      "category": "housing",
+      "name": {
+        "en": "Housing Assistance (PMAY linkage)",
+        "hi": "आवास सहायता (PMAY)",
+        "mr": "घरकुल सहाय्य (PMAY)"
+      },
+      "description": {
+        "en": "Financial assistance for house construction/repair, linked to Pradhan Mantri Awas Yojana eligibility.",
+        "hi": "घर बनाने/मरम्मत के लिए आर्थिक सहायता, PMAY पात्रता से जुड़ी.",
+        "mr": "घर बांधणी/दुरुस्तीसाठी आर्थिक मदत, PMAY पात्रतेशी संलग्न."
+      },
+      "amount": { "value": 150000, "display": { "en": "PMAY-linked grant", "hi": "PMAY से जुड़ा अनुदान", "mr": "PMAY संलग्न अनुदान" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "PMAY eligibility letter from competent officer",
+        "Land/house ownership documents",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Schemes → Housing Assistance on mahabocw.in",
+        "Attach PMAY eligibility letter and ownership documents",
+        "Submit at the Board office"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_toolkit",
+      "category": "livelihood",
+      "name": {
+        "en": "Essential Kit / Tool Assistance",
+        "hi": "आवश्यक किट / औजार सहायता",
+        "mr": "अत्यावश्यक संच / अवजारे सहाय्य"
+      },
+      "description": {
+        "en": "Direct benefit (₹2,000-₹5,000 via DBT) and tools/essential kits to help you work safely and earn more.",
+        "hi": "DBT के जरिए ₹2,000-₹5,000 और काम के लिए औजार/किट.",
+        "mr": "DBT द्वारे ₹2,000-₹5,000 आणि कामासाठी अवजारे/संच."
+      },
+      "amount": { "value": 5000, "display": { "en": "₹2,000 – ₹5,000 + kit", "hi": "₹2,000 – ₹5,000 + किट", "mr": "₹2,000 – ₹5,000 + संच" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Self-declaration about tools needed",
+        "Quotation for tools (if asked)",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Schemes → Tool / Essential Kit on mahabocw.in",
+        "Attach self-declaration and quotation",
+        "Submit online or at the Board office"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    },
+    {
+      "id": "mh_pension",
+      "category": "pension",
+      "name": {
+        "en": "Pension after 60",
+        "hi": "60 के बाद पेंशन",
+        "mr": "60 नंतर निवृत्तीवेतन"
+      },
+      "description": {
+        "en": "Monthly pension after age 60 for members with the required years of membership. Plan ahead — register young so you qualify later.",
+        "hi": "60 वर्ष के बाद मासिक पेंशन (आवश्यक सदस्यता वर्षों के साथ). जल्दी नोंदणी करें ताकि बाद में पात्र बनें.",
+        "mr": "60 वर्षांनंतर मासिक निवृत्तीवेतन (आवश्यक सदस्यता वर्षांसह). लवकर नोंदणी करा म्हणजे पुढे पात्र व्हाल."
+      },
+      "amount": { "value": 36000, "display": { "en": "Monthly pension after 60", "hi": "60 के बाद मासिक पेंशन", "mr": "60 नंतर मासिक निवृत्तीवेतन" } },
+      "eligibility": { "minAge": 60, "maxAge": 200, "requiresRegistration": true },
+      "documents": [
+        "Registration card with required membership years",
+        "Age proof",
+        "Bank passbook",
+        "Life certificate (annual)"
+      ],
+      "howToClaim": [
+        "After turning 60, open Schemes → Pension on mahabocw.in",
+        "Attach age proof and membership record",
+        "Submit a life certificate every year to continue pension"
+      ],
+      "officeLink": "https://mahabocw.in/en/welfare-schemes/"
+    }
+  ]
+}
