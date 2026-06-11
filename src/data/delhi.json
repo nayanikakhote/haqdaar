@@ -1,0 +1,306 @@
+{
+  "state": "delhi",
+  "boardName": {
+    "en": "Delhi Building & Other Construction Workers Welfare Board (DBOCWWB)",
+    "hi": "दिल्ली इमारत एवं अन्य निर्माण कामगार कल्याण बोर्ड (DBOCWWB)",
+    "mr": "दिल्ली इमारत व इतर बांधकाम कामगार कल्याण मंडळ (DBOCWWB)"
+  },
+  "portal": "https://bocw.delhi.gov.in",
+  "sourceNote": "Amounts taken from the official DBOCWWB welfare schemes page (bocw.delhi.gov.in/bocw/welfare-schemes), with rule numbers under the BOCW (Delhi) rules. Verify before any official/legal use as boards revise amounts periodically.",
+  "registration": {
+    "minAge": 18,
+    "maxAge": 60,
+    "minDaysWorked": 90,
+    "feeNote": {
+      "en": "Registration is free / a nominal fee. Many benefits require at least 1 year of membership.",
+      "hi": "नोंदणी मोफत / नाममात्र शुल्क. अनेक लाभांसाठी किमान 1 वर्ष सदस्यत्व आवश्यक.",
+      "mr": "नोंदणी मोफत / नाममात्र शुल्क. अनेक लाभांसाठी किमान 1 वर्ष सदस्यत्व आवश्यक."
+    }
+  },
+  "benefits": [
+    {
+      "id": "dl_registration",
+      "category": "registration",
+      "isRegistrationStep": true,
+      "name": {
+        "en": "Register with the Board",
+        "hi": "बोर्ड में पंजीकरण करें",
+        "mr": "मंडळात नोंदणी करा"
+      },
+      "description": {
+        "en": "Your gateway to every benefit. Free / nominal fee. Many schemes need 1 year of membership, so register early.",
+        "hi": "सभी लाभों का प्रवेशद्वार. मोफत / नाममात्र शुल्क. कई योजनाओं के लिए 1 वर्ष सदस्यता जरूरी — जल्दी पंजीकरण करें.",
+        "mr": "सर्व लाभांचे प्रवेशद्वार. मोफत / नाममात्र शुल्क. अनेक योजनांसाठी 1 वर्ष सदस्यत्व आवश्यक — लवकर नोंदणी करा."
+      },
+      "amount": { "value": 1, "display": { "en": "Free / nominal", "hi": "मोफत / नाममात्र", "mr": "मोफत / नाममात्र" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "minDaysWorked": 90, "requiresRegistration": false },
+      "documents": [
+        "Aadhaar card",
+        "90-day work certificate (signed by contractor/employer)",
+        "Age proof",
+        "Delhi residence proof",
+        "Bank passbook",
+        "Passport-size photos"
+      ],
+      "howToClaim": [
+        "Go to bocw.delhi.gov.in and open Worker Registration / e-District",
+        "Fill the form with Aadhaar and mobile number",
+        "Upload documents and the 90-day work certificate",
+        "Complete verification and collect your registration card",
+        "If already on the old e-District portal, use the migration link"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/"
+    },
+    {
+      "id": "dl_education",
+      "category": "education",
+      "name": {
+        "en": "Financial Assistance for Education",
+        "hi": "शिक्षा के लिए आर्थिक सहायता",
+        "mr": "शिक्षणासाठी आर्थिक सहाय्य"
+      },
+      "description": {
+        "en": "Education support for children of registered workers, from school through higher and professional courses (Rule 281).",
+        "hi": "पंजीकृत कामगारों के बच्चों के लिए स्कूल से उच्च शिक्षा तक सहायता (नियम 281).",
+        "mr": "नोंदणीकृत कामगारांच्या मुलांसाठी शाळेपासून उच्च शिक्षणापर्यंत मदत (नियम 281)."
+      },
+      "amount": { "value": 90000, "display": { "en": "Class-wise education grant", "hi": "कक्षावार शिक्षा अनुदान", "mr": "इयत्तानिहाय शिक्षण अनुदान" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true, "requiresKids": true },
+      "documents": [
+        "Registration card",
+        "Child's school/college bonafide certificate",
+        "Previous year mark sheet",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Welfare Schemes → Financial Assistance for Education on bocw.delhi.gov.in",
+        "Fill Form XLIII per child and attach school documents",
+        "Submit online and track status"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_maternity",
+      "category": "maternity",
+      "name": {
+        "en": "Maternity Benefit",
+        "hi": "प्रसूति लाभ",
+        "mr": "प्रसूती लाभ"
+      },
+      "description": {
+        "en": "₹30,000 to registered women members and wives of registered male members, up to 2 children (Rule 271).",
+        "hi": "पंजीकृत महिला सदस्य और पुरुष सदस्य की पत्नी के लिए ₹30,000, 2 बच्चों तक (नियम 271).",
+        "mr": "नोंदणीकृत महिला सदस्य व पुरुष सदस्याच्या पत्नीसाठी ₹30,000, 2 मुलांपर्यंत (नियम 271)."
+      },
+      "amount": { "value": 30000, "display": { "en": "₹30,000", "hi": "₹30,000", "mr": "₹30,000" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true, "custom": "maternity" },
+      "documents": [
+        "Registration card",
+        "Medical certificate / hospital records",
+        "Birth certificate of child",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Welfare Schemes → Maternity Benefit (Form XXXIV)",
+        "Attach medical certificate and birth certificate",
+        "Submit within the allowed window after childbirth"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_marriage",
+      "category": "marriage",
+      "name": {
+        "en": "Marriage Assistance",
+        "hi": "विवाह सहायता",
+        "mr": "विवाह सहाय्य"
+      },
+      "description": {
+        "en": "₹51,000 for a female member or a daughter's marriage; ₹35,000 for a male member or a son's marriage (Rule 282).",
+        "hi": "महिला सदस्य या बेटी के विवाह के लिए ₹51,000; पुरुष सदस्य या बेटे के विवाह के लिए ₹35,000 (नियम 282).",
+        "mr": "महिला सदस्य किंवा मुलीच्या विवाहासाठी ₹51,000; पुरुष सदस्य किंवा मुलाच्या विवाहासाठी ₹35,000 (नियम 282)."
+      },
+      "amount": { "value": 51000, "display": { "en": "₹35,000 – ₹51,000", "hi": "₹35,000 – ₹51,000", "mr": "₹35,000 – ₹51,000" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Marriage certificate",
+        "Wedding invitation card",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Welfare Schemes → Financial Assistance for Marriage (Form XLIV)",
+        "Attach marriage certificate and invitation",
+        "50% can be claimed in advance; rest after submitting the marriage certificate"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_disability_pension",
+      "category": "accident",
+      "name": {
+        "en": "Disability Pension + Ex-gratia",
+        "hi": "विकलांगता पेंशन + अनुग्रह राशि",
+        "mr": "अपंगत्व निवृत्तीवेतन + सानुग्रह रक्कम"
+      },
+      "description": {
+        "en": "₹3,000/month disability pension plus ₹1,00,000 ex-gratia for permanent disability from accident, paralysis, TB, leprosy etc. (Rule 275).",
+        "hi": "स्थायी विकलांगता पर ₹3,000/माह पेंशन और ₹1,00,000 अनुग्रह राशि (नियम 275).",
+        "mr": "कायमस्वरूपी अपंगत्वावर ₹3,000/महिना निवृत्तीवेतन व ₹1,00,000 सानुग्रह रक्कम (नियम 275)."
+      },
+      "amount": { "value": 136000, "display": { "en": "₹3,000/mo + ₹1,00,000", "hi": "₹3,000/माह + ₹1,00,000", "mr": "₹3,000/महिना + ₹1,00,000" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Disability certificate from competent authority",
+        "Medical records",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Welfare Schemes → Disability Pension (Form XXXIX) / Ex-gratia",
+        "Attach disability certificate and medical records",
+        "Submit at the Board office"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_medical",
+      "category": "medical",
+      "name": {
+        "en": "Medical Assistance",
+        "hi": "चिकित्सा सहायता",
+        "mr": "वैद्यकीय सहाय्य"
+      },
+      "description": {
+        "en": "Financial assistance towards medical treatment and hospitalisation for the worker and family (Rule 280).",
+        "hi": "कामगार और परिवार के इलाज व अस्पताल खर्च के लिए सहायता (नियम 280).",
+        "mr": "कामगार व कुटुंबाच्या उपचार व रुग्णालय खर्चासाठी मदत (नियम 280)."
+      },
+      "amount": { "value": 100000, "display": { "en": "Medical treatment grant", "hi": "चिकित्सा अनुदान", "mr": "वैद्यकीय अनुदान" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Medical reports and doctor's prescription",
+        "Hospital bills",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Welfare Schemes → Medical Assistance (Form XLII)",
+        "Attach reports, prescription and hospital bills",
+        "Submit online or at the Board office"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_death_funeral",
+      "category": "accident",
+      "name": {
+        "en": "Death & Funeral Benefit (for family)",
+        "hi": "मृत्यु एवं अंत्येष्टि लाभ (परिवार के लिए)",
+        "mr": "मृत्यू व अंत्यसंस्कार लाभ (कुटुंबासाठी)"
+      },
+      "description": {
+        "en": "Financial assistance to the family/nominee on the member's death, plus funeral expenses (Rules 277-278).",
+        "hi": "सदस्य की मृत्यु पर परिवार/नामिती को आर्थिक सहायता व अंत्येष्टि खर्च (नियम 277-278).",
+        "mr": "सदस्याच्या मृत्यूवर कुटुंब/नामनिर्देशितास आर्थिक मदत व अंत्यसंस्कार खर्च (नियम 277-278)."
+      },
+      "amount": { "value": 100000, "display": { "en": "Death + funeral benefit", "hi": "मृत्यु + अंत्येष्टि लाभ", "mr": "मृत्यू + अंत्यसंस्कार लाभ" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Death certificate",
+        "FIR / post-mortem report (accidental)",
+        "Legal heir / nominee certificate",
+        "Nominee's bank passbook"
+      ],
+      "howToClaim": [
+        "Nominee opens Welfare Schemes → Death Benefit (Form XXXVIII) and Funeral Benefit (Form XLI)",
+        "Attach death certificate and heir certificate",
+        "Submit at the Board office"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_housing",
+      "category": "housing",
+      "name": {
+        "en": "Housing Advance / Loan",
+        "hi": "आवास अग्रिम / ऋण",
+        "mr": "घरकुल अग्रिम / कर्ज"
+      },
+      "description": {
+        "en": "Advance for purchase or construction of a house for registered members (Rule 274).",
+        "hi": "पंजीकृत सदस्यों के लिए घर खरीदने/बनाने हेतु अग्रिम (नियम 274).",
+        "mr": "नोंदणीकृत सदस्यांसाठी घर खरेदी/बांधणीसाठी अग्रिम (नियम 274)."
+      },
+      "amount": { "value": 150000, "display": { "en": "Housing advance", "hi": "आवास अग्रिम", "mr": "घरकुल अग्रिम" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Land/house documents",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Welfare Schemes → Advance for house (Form XXIX)",
+        "Attach property documents",
+        "Submit at the Board office"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_toolkit",
+      "category": "livelihood",
+      "name": {
+        "en": "Tool Grant + Free Bus Pass",
+        "hi": "औजार अनुदान + मुफ्त बस पास",
+        "mr": "अवजारे अनुदान + मोफत बस पास"
+      },
+      "description": {
+        "en": "Grant/loan to buy work-related tools (Rule 276), plus a free bus pass and skill-enhancement training.",
+        "hi": "काम के औजार खरीदने के लिए अनुदान/ऋण (नियम 276), मुफ्त बस पास और कौशल प्रशिक्षण.",
+        "mr": "कामाची अवजारे खरेदीसाठी अनुदान/कर्ज (नियम 276), मोफत बस पास व कौशल्य प्रशिक्षण."
+      },
+      "amount": { "value": 20000, "display": { "en": "Tool grant + bus pass", "hi": "औजार अनुदान + बस पास", "mr": "अवजारे अनुदान + बस पास" } },
+      "eligibility": { "minAge": 18, "maxAge": 60, "requiresRegistration": true },
+      "documents": [
+        "Registration card",
+        "Self-declaration / quotation for tools",
+        "Bank passbook"
+      ],
+      "howToClaim": [
+        "Open Welfare Schemes → Tool Grant (Form XL) / Bus Pass",
+        "Attach quotation or self-declaration",
+        "Submit online or at the Board office"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    },
+    {
+      "id": "dl_pension",
+      "category": "pension",
+      "name": {
+        "en": "Pension after 60",
+        "hi": "60 के बाद पेंशन",
+        "mr": "60 नंतर निवृत्तीवेतन"
+      },
+      "description": {
+        "en": "₹3,000/month after age 60 (Rule 273), +₹300 for each year of membership beyond 5 years. Needs ≥1 year of membership. Register young to qualify.",
+        "hi": "60 वर्ष के बाद ₹3,000/माह (नियम 273), 5 वर्ष से अधिक हर साल के लिए +₹300. कम से कम 1 वर्ष सदस्यता जरूरी.",
+        "mr": "60 वर्षांनंतर ₹3,000/महिना (नियम 273), 5 वर्षांपेक्षा जास्त प्रत्येक वर्षासाठी +₹300. किमान 1 वर्ष सदस्यत्व आवश्यक."
+      },
+      "amount": { "value": 36000, "display": { "en": "₹3,000 / month", "hi": "₹3,000 / माह", "mr": "₹3,000 / महिना" } },
+      "eligibility": { "minAge": 60, "maxAge": 200, "requiresRegistration": true },
+      "documents": [
+        "Registration card with ≥1 year membership",
+        "Age proof",
+        "Bank passbook",
+        "Life certificate (annual)"
+      ],
+      "howToClaim": [
+        "After turning 60, open Welfare Schemes → Pension Benefit (Form XXXV)",
+        "Attach age proof and membership record",
+        "Submit a life certificate every year to continue pension"
+      ],
+      "officeLink": "https://bocw.delhi.gov.in/bocw/welfare-schemes"
+    }
+  ]
+}
