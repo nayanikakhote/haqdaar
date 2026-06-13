@@ -100,7 +100,7 @@ function Intake() {
 function isStepAnswered(key: StepKey, p: Partial<Profile>): boolean {
   switch (key) {
     case "state": return !!p.state;
-    case "age": return typeof p.age === "number" && p.age > 0;
+    case "age": return typeof p.age === "number" && p.age >= 18 && p.age <= 60;
     case "work": return !!p.workType;
     case "days": return typeof p.daysWorked === "number";
     case "registered": return !!p.registered;
