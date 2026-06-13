@@ -135,7 +135,7 @@ function StepView({
               selected={profile.state === s}
               onClick={() => { update({ state: s }); }}
             >
-              <div className="text-xl font-extrabold capitalize">{s}</div>
+              <div className="text-xl font-extrabold">{ui("state_" + s)}</div>
               <div className="mt-1 text-xs text-muted-foreground">
                 {s === "maharashtra" ? "MahaBOCW" : "DBOCWWB"}
               </div>
