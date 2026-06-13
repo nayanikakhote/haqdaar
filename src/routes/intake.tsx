@@ -148,22 +148,29 @@ function StepView({
 
   if (stepKey === "age") {
     const age = profile.age ?? 0;
+    const tooYoung = age > 0 && age < 18;
+    const tooOld = age > 60;
     return (
       <div className="space-y-4">
         <QHeading>{ui("q_age")}</QHeading>
         <div className="flex items-center justify-center gap-4">
-          <Button variant="outline" size="lg" onClick={() => update({ age: Math.max(0, age - 1) })}>−</Button>
+          <Button variant="outline" size="lg" onClick={() => update({ age: Math.max(18, (age || 18) - 1) })}>−</Button>
           <input
             type="number"
             inputMode="numeric"
+            min={18}
+            max={60}
             value={age || ""}
             onChange={(e) => update({ age: parseInt(e.target.value || "0", 10) || 0 })}
             className="h-20 w-32 border-[3px] border-foreground bg-card text-center font-display text-5xl font-black tabular-nums shadow-brutal-sm focus:outline-none"
             placeholder="—"
           />
-          <Button variant="outline" size="lg" onClick={() => update({ age: age + 1 })}>+</Button>
+          <Button variant="outline" size="lg" onClick={() => update({ age: Math.min(60, (age || 17) + 1) })}>+</Button>
         </div>
-        <p className="text-center text-xs text-muted-foreground">18 – 60</p>
+        <p className="text-center text-xs text-muted-foreground">{ui("age_range")}</p>
+        {(tooYoung || tooOld) && (
+          <p className="text-center text-xs font-bold text-destructive">{ui("age_min_note")}</p>
+        )}
       </div>
     );
   }
