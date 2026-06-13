@@ -24,7 +24,10 @@ const STEPS: StepKey[] = ["state", "age", "work", "days", "registered", "gender"
 
 const WORK_TYPES = [
   "mason", "tiling", "painting", "carpentry",
-  "helper", "electrician", "plumbing", "other",
+  "helper", "electrician", "plumbing", "welder",
+  "bar_bender", "scaffolding", "centering", "plastering",
+  "roofing", "demolition", "stone_cutter", "polishing",
+  "glass", "road", "well_digger", "crane", "other",
 ] as const;
 
 function Intake() {
