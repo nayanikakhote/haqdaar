@@ -57,6 +57,11 @@ function BenefitDetail() {
 
   useEffect(() => {
     if (!benefit || !profile) return;
+    // Prefer the verified howToClaim steps from the state JSON file.
+    if (Array.isArray(benefit.howToClaim) && benefit.howToClaim.length > 0) {
+      setSteps(benefit.howToClaim);
+      return;
+    }
     setSteps(null);
     let cancelled = false;
     explainClaim(benefit, profile, lang).then((s) => {
