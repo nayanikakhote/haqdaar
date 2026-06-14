@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useLang } from "@/lib/lang";
 import { loadProfile, isProfileComplete } from "@/lib/profile";
 import { getStateData, matchBenefits } from "@/lib/rulesEngine.js";
-import { explainClaim } from "@/lib/claudeClient.js";
 import type { Benefit, Profile } from "@/lib/haqdaar-types";
 import { Button } from "@/components/ui/button";
 
@@ -31,7 +30,7 @@ export const Route = createFileRoute("/benefits/$id")({
 
 function BenefitDetail() {
   const { id } = Route.useParams();
-  const { ui, t, lang } = useLang();
+  const { ui, t } = useLang();
   const navigate = useNavigate();
   const [profile, setProfile] = useState<Profile | null>(null);
   const [benefit, setBenefit] = useState<Benefit | null>(null);
@@ -56,19 +55,9 @@ function BenefitDetail() {
   }, [id, navigate]);
 
   useEffect(() => {
-    if (!benefit || !profile) return;
-    // Prefer the verified howToClaim steps from the state JSON file.
-    if (Array.isArray(benefit.howToClaim) && benefit.howToClaim.length > 0) {
-      setSteps(benefit.howToClaim);
-      return;
-    }
-    setSteps(null);
-    let cancelled = false;
-    explainClaim(benefit, profile, lang).then((s) => {
-      if (!cancelled) setSteps(s);
-    });
-    return () => { cancelled = true; };
-  }, [benefit, profile, lang]);
+    if (!benefit) return;
+    setSteps(Array.isArray(benefit.howToClaim) && benefit.howToClaim.length > 0 ? benefit.howToClaim : []);
+  }, [benefit]);
 
   useEffect(() => {
     if (!benefit) return;
@@ -151,24 +140,25 @@ function BenefitDetail() {
       </section>
 
       <section className="brutal-card p-5">
-        <h2 className="font-display text-lg font-extrabold">{ui("steps")}</h2>
-        {steps === null ? (
-          <div className="mt-3 space-y-2">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="h-12 border-[3px] border-foreground bg-muted/60 animate-pulse" />
-            ))}
-          </div>
-        ) : (
-          <ol className="mt-3 space-y-3">
-            {steps.map((s, i) => (
-              <li key={i} className="flex gap-3">
-                <span className="grid h-8 w-8 shrink-0 place-items-center border-[3px] border-foreground bg-primary font-display text-sm font-black shadow-brutal-sm">
-                  {i + 1}
-                </span>
-                <p className="pt-1 text-sm leading-relaxed">{s}</p>
-              </li>
-            ))}
-          </ol>
+        <h2 className="font-display text-lg font-extrabold">{ui("howToClaim")}</h2>
+        <ol className="mt-3 space-y-3">
+          {steps === null
+            ? [1, 2, 3].map((i) => (
+                <li key={i} className="h-12 border-[3px] border-foreground bg-muted/60 animate-pulse" />
+              ))
+            : steps.map((s, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="grid h-8 w-8 shrink-0 place-items-center border-[3px] border-foreground bg-primary font-display text-sm font-black shadow-brutal-sm">
+                    {i + 1}
+                  </span>
+                  <p className="pt-1 text-sm leading-relaxed">{s}</p>
+                </li>
+              ))}
+        </ol>
+        {benefit.officeLink && (
+          <a href={benefit.officeLink} target="_blank" rel="noopener noreferrer" className="mt-5 inline-block">
+            <Button variant="brutal">{ui("claimNow")} ↗</Button>
+          </a>
         )}
       </section>
 

@@ -75,37 +75,41 @@ function BenefitsList() {
 
   function BenefitCard({ b, locked }: { b: Benefit; locked: boolean }) {
     return (
-      <Link
-        to="/benefits/$id"
-        params={{ id: b.id }}
-        className={
-          "brutal-card group block p-5 transition-transform hover:-translate-x-1 hover:-translate-y-1 " +
-          (locked ? "opacity-90" : "")
-        }
-      >
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0 flex-1">
-            <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-              {b.category}
-            </div>
-            <h3 className="mt-1 font-display text-lg font-extrabold leading-tight">{t(b.name)}</h3>
-            <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{t(b.description)}</p>
-          </div>
-          <div className="shrink-0 text-right">
-            {locked && (
-              <div className="mb-1 inline-block border-[2px] border-foreground bg-warning px-1.5 py-0.5 text-[10px] font-bold uppercase">
-                🔒
+      <div className={"brutal-card overflow-hidden " + (locked ? "opacity-90" : "")}>
+        <Link
+          to="/benefits/$id"
+          params={{ id: b.id }}
+          className="block p-5 transition-transform hover:-translate-x-1 hover:-translate-y-1"
+        >
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+                {b.category}
               </div>
-            )}
-            <div className="border-[3px] border-foreground bg-primary px-2 py-1 text-sm font-black tabular-nums shadow-brutal-sm">
-              {t(b.amount.display)}
+              <h3 className="mt-1 font-display text-lg font-extrabold leading-tight">{t(b.name)}</h3>
+              <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{t(b.description)}</p>
+            </div>
+            <div className="shrink-0 text-right">
+              {locked && (
+                <div className="mb-1 inline-block border-[2px] border-foreground bg-warning px-1.5 py-0.5 text-[10px] font-bold uppercase">
+                  🔒
+                </div>
+              )}
+              <div className="border-[3px] border-foreground bg-primary px-2 py-1 text-sm font-black tabular-nums shadow-brutal-sm">
+                {t(b.amount.display)}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mt-3 text-xs font-bold uppercase tracking-widest text-foreground">
-          {ui("howToClaim")} →
-        </div>
-      </Link>
+        </Link>
+        <a
+          href={b.officeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-between border-t-[3px] border-foreground bg-card px-5 py-3 text-xs font-bold uppercase tracking-widest text-foreground transition-colors hover:bg-primary"
+        >
+          {ui("howToClaim")} ↗
+        </a>
+      </div>
     );
   }
 }
