@@ -1,42 +1,46 @@
-# HaqDaar — हक़दार
+HaqDaar — हक़दार
+Claim What's Yours. An AI-assisted welfare benefits navigator for India's construction workers.
+🔗 Live Demo: https://haqdaar.vercel.app/ · 🌐 हिंदी · मराठी · English · 🏗️ AI for Social Impact
 
-**Claim What's Yours.**
+📌 Project Overview
+HaqDaar helps India's ~50 million construction workers discover and claim the welfare benefits they are legally owed. A worker answers a few guided questions (or describes their situation in their own language), a deterministic rules engine matches every benefit they personally qualify for — state by state — and HaqDaar returns a plain-language walkthrough of what to claim, which documents to carry, and where to go.
+No login. No forms. Mobile-first. Done in about two minutes.
+The guiding principle: AI where it helps, rules where accuracy is non-negotiable. An LLM is used only to understand messy free-text and simplify guidance — never to decide eligibility. All money and eligibility logic runs through an auditable rules engine.
 
-An AI-assisted welfare benefits navigator for India's ~50 million construction workers. A worker describes their situation in their own language, a deterministic rules engine matches every benefit they personally qualify for — state by state — and HaqDaar returns a plain-language walkthrough of what to claim, which documents to carry, and where to go.
+🧩 Problem Statement
+The Building & Other Construction Workers (BOCW) Act, 1996 guarantees education, medical, pension, maternity, accident and housing benefits to registered construction workers. Yet:
+₹37,000 crore+ sits in state BOCW boards, largely unspent.
+50M+ construction workers form India's largest informal workforce.
+Eligibility is simple — 90+ days worked, age 18–60, registration fee ≤ ₹50 — but most workers never register, and those who do rarely know what they can claim.
+The money is already funded. The gap is between the law and the laborer.
+Generic government portals are English-only and show every scheme with zero personalization or claim guidance. HaqDaar is built for the low-literacy, informal worker — vernacular-first, personalized, and step-by-step.
 
-🔗 **Live demo:** https://haqdaar.vercel.app/
-🌐 **Languages:** हिंदी · मराठी · English
-🏗️ **Built for:** OSC Build Hackathon — *AI for Social Impact*
-
----
-
-## The problem
-
-The Building & Other Construction Workers (BOCW) Act, 1996 already guarantees education, medical, pension, maternity, accident and housing benefits to construction workers. Roughly **₹37,000 crore** sits in state BOCW boards — largely unspent. Eligibility is simple (90+ days worked, age 18–60, registration fee ≤ ₹50), yet most workers never register, and those who do rarely know what they can actually claim.
-
-> The money is already funded. The gap is between the law and the laborer.
-
-HaqDaar closes that gap in about two minutes — no login, no forms, mobile-first.
-
-## How it works
-
-```
-User input  →  Language layer  →  Rules engine  →  Benefits DB  →  Output layer  →  Benefits card
-(guided Q's    (LLM parses        (deterministic,   (per-state      (plain-language   (what you qualify
- + free text)   messy vernacular)  state-specific)    JSON)           walkthrough)      for + how to claim)
-```
-
-The worker answers a few guided questions (state, age, days worked, registration status, family details) or types their situation in free text. A rules engine evaluates eligibility against state-specific thresholds and returns only the benefits that person qualifies for, with amounts and claim steps.
+✨ Features
+Multilingual intake — works in Hindi, Marathi and English.
+Guided + free-text input — answer simple questions, or type your situation in your own words.
+Personalized results — shows only the benefits you qualify for, not a generic list.
+Deterministic rules engine — correct, auditable eligibility logic with state-specific thresholds (no ML guessing on money).
+Plain-language walkthrough — what to claim, documents needed, and where to go.
+State-specific data — accurate benefit amounts per state (Delhi + Maharashtra today).
+No login, no forms, mobile-first — built for a shared phone at a worksite.
+Graceful AI fallback — optional LLM language layer; if unavailable, an offline parser keeps the app fully functional.
 
 
-**Coverage today:** Delhi + Maharashtra (2 states). Adding a state = adding one JSON file.
+🛠️ Tech Stack
 
-## Data & disclaimer
+LayerTechnologyFrontendReact 19 + TanStack Start (Vite, Nitro), Tailwind CSS v4, shadcn/uiBackendFastAPI (Python) — hosts the language layer (optional)AIClaude / GPT API — language layer onlyDataCurated benefits JSON, one file per stateDeploymentVercel (frontend) · Render (backend)
 
-Benefit amounts are sourced from official state BOCW board websites. They can change — always verify on the official board site before applying. HaqDaar is an informational navigator, not an official government service.
 
-## Built by
+👥 Team Details
+Team: dr engineer
+Name- Nayanika Khote
+Institution- K.J. Somaiya School of Engineering
 
-**Nayanika Khote** — K.J. Somaiya School of Engineering
+🔗 Demo Link
+Live app: https://haqdaar.vercel.app/
 
-> HaqDaar doesn't need a new law. It just needs to exist.
+
+Benefit amounts are sourced from official state BOCW board websites and may change — always verify on the official board site before applying. HaqDaar is an informational navigator, not an official government service.
+
+
+HaqDaar doesn't need a new law. It just needs to exist.
